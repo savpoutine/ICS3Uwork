@@ -28,6 +28,7 @@ public class Problem3 {
 			String handle=in.readLine();
 			int h=Integer.parseInt(handle);
 			int l=3+s*2;
+			
 			// prints the tines of the trident
 			for (int i=0; i<t; i++) {
 				for (int j=0; j<3; j++) {	
@@ -38,11 +39,13 @@ public class Problem3 {
 				}
 				System.out.println(" ");
 			}	
+			
 			//prints a base row for the trident below the tines and above the handle
 			for (int i=0; i<l; i++) {
 				System.out.print("*");
 			}
 			System.out.println(" ");
+			
 			// prints the handle of the trident
 			for (int i=0; i<h; i++) {
 				for (int ii=0; ii<s+1; ii++) {

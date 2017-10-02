@@ -23,7 +23,6 @@ public class Problem8 {
 			int result=(int) Math.sqrt(number);
 			System.out.println("The largest side length for this square is " + result);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
