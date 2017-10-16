@@ -25,7 +25,7 @@ public class Problem1 {
 			String month=in.readLine();
 			int days=Integer.parseInt(month);
 			// prints the days of the week with no numbers yet
-			System.out.println("Sun\tMon\tTues\tWed\tThurs\tFri\tSat\t");
+			System.out.println("Sun\tMon\tTue\tWed\tThr\tFri\tSat\t");
 			// shows where to put the first number on the calendar 
 			for (int i=1; i<start; i++) {
 				System.out.print("\t");
