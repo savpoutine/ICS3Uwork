@@ -12,31 +12,31 @@ public class DealOrNoDeal {
 
 	public static void main(String[] args) {
 		Scanner sc= new Scanner (System.in);
-		System.out.println("Please enter the amount of boxes opened.");
-		int boxes =sc.nextInt();
-		System.out.println("Please enter the value of the boxes and press enter after each value.");
-		//array for the values of the box
-		int[] vArray= new int [boxes];
-		for (int i=0; i<vArray.length; i++) {
-			vArray[i]=sc.nextInt();
+		int boxes;
+		int boxNumber;
+		int [] vArray= {100, 500, 1000, 5000, 10000, 25000, 50000,100000,500000,1000000};
+		//array for the box
+		boxes=sc.nextInt();
+		for (int i=0; i<boxes;i++) {
+			boxNumber=sc.nextInt();
+			vArray[boxNumber-1]=0;
 		}
-		System.out.println("What did the bank offer");
 		int offer=sc.nextInt();
 		int total=0;
-		int average;
+		int average = 0;
 		//calculating the average
-		
-		for (int i=1;i<boxes;i++){
+		for (int i=0; i<vArray.length; i++) {
 			total=total+vArray[i];
-			average=total/boxes;
-			if (offer>average) {
-				System.out.println("deal");			
-			}
-			else {
-				System.out.println("no deal");
-			}
 		}
-		System.out.print("Please use the last deal or no deal outputed.");
+		average=total/(vArray.length-boxes);
+			
+		if (offer>average) {
+			System.out.println("deal");			
+		}
+		else {
+			System.out.println("no deal");
+		}
+		
 	}
 
 }
