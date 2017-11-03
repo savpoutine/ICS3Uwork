@@ -128,57 +128,69 @@ public class MathPlus {
 	}
 	public static int min(int [] I) {
 		int minValue=I[0];		
+		int answer=0;
 		for (int i=1; i<I.length; i++) {
 			if (minValue>I[i]) {
 				minValue=I[i];
+				answer=i;
 			}
 		}
-		return minValue;
+		return answer;
 	}
 	public static double min (double [] D) {
 		double minValue=D[0];
+		double answer=0.0;
 		for (int i=1; i<D.length; i++) {
 			if (minValue>D[i]) {
 				minValue=D[i];
+				answer=i;
 			}
 		}
-		return minValue;
+		return answer;
 	}
 	public static long min(long[] L) {
 		long minValue=L[0];
+		long answer=0;
 		for (int i=1; i<L.length; i++) {
 			if (minValue>L[i]) {
 				minValue=L[i];
+				answer=i;
 			}
 		}
-		return minValue;
+		return answer;
 	}
 	public static int max(int [] I) {
 		int maxValue=I[0];
+		int answer=0;
 		for (int i=1; i<I.length; i++) {
 			if (maxValue<I[i]) {
 				maxValue=I[i];
+				answer=i;
 			}
 		}
-		return maxValue;
+		return answer;
 	}
 	public static double max (double [] D) {
 		double maxValue=D[0];
+		double answer=0.0;
 		for (int i=1; i<D.length; i++) {
 			if (maxValue<D[i]) {
 				maxValue=D[i];
+				answer=i;
 			}
 		}
-		return maxValue;
+		return answer;
 	}
 		public static long max (long [] L) {
 			long maxValue=L[0];
+			long answer=0;
 			for (int i=1; i<L.length; i++) {
 				if (maxValue<L[i]) {
 					maxValue=L[i];
+					answer=i;
 				}
 			}
-			return maxValue;
+			return answer;
 		}
 
 	}
