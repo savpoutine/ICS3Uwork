@@ -23,7 +23,7 @@ public class Problem7 {
 			int num=Integer.parseInt(input);
 			//finds out how many ways the numbers can be put on two hands
 			int output= (int) (Math.sqrt(num) + 1);		
-			System.out.print("Your number can be put on two hands " + output + "ways.");
+			System.out.print("Your number can be put on two hands " + output + " ways.");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
