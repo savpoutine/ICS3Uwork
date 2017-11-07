@@ -38,6 +38,7 @@ public class MathPlus {
 		System.out.println(max(I));//int max array value
 		System.out.println(max(D));//double max array value
 		System.out.println(max(L));//long max array value
+		System.out.print(factors(20));
 
 	}
 
@@ -181,16 +182,32 @@ public class MathPlus {
 		}
 		return answer;
 	}
-		public static long max (long [] L) {
-			long maxValue=L[0];
-			long answer=0;
-			for (int i=1; i<L.length; i++) {
-				if (maxValue<L[i]) {
-					maxValue=L[i];
-					answer=i;
-				}
+	public static long max (long [] L) {
+		long maxValue=L[0];
+		long answer=0;
+		for (int i=1; i<L.length; i++) {
+			if (maxValue<L[i]) {
+				maxValue=L[i];
+				answer=i;
 			}
-			return answer;
 		}
+		return answer;
+	}
+	public static int factors (int num1) {
+		int size=numberOfFactors(num1);
+		int place=0;
+		int number=0;
+		int [] answer=new int [size];
+		for (int i=1; i<size; i++) {
+			if (num1%i ==0) {  
+				number=(answer [place]=i);
+			}
+		}
+		
+		return number;
 
+
+	}
+	
+		
 	}
