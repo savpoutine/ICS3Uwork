@@ -57,13 +57,13 @@ public class MathPlus {
 		//factors print 
 		int [] F= factors(20);
 		for (int i=0; i<F.length; i++) {
-			System.out.print(F[i] + ", ");
+			System.out.print(F[i] + " ");
 		}
 		System.out.println();
 		//array list print
 		ArrayList<Integer> l=arrayList(20);
 		for (int i=0; i<l.size(); i++) {
-			System.out.print(l.get(i)+ ", ");
+			System.out.print(l.get(i)+" ");
 		}
 		System.out.println(); 
 		//mean, median, and mode prints
