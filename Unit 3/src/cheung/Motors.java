@@ -8,8 +8,8 @@ public class Motors {
 
 	public static void main(String[] args) {
 	
-		fwdSpin();
-
+		circle();
+ 
 	}
 	public static void square () {
 		EV3LargeRegulatedMotor leftMotor = new EV3LargeRegulatedMotor(MotorPort.B);
@@ -51,8 +51,8 @@ public class Motors {
 		rightMotor.stop();
 		
 		for (int i=0; i<4; i++) {
-		leftMotor.rotate(720, true);
-		rightMotor.rotate(-720);
+		leftMotor.rotate(790, true);
+		rightMotor.rotate(-790);
 		}
 		
 		leftMotor.stop();
@@ -65,6 +65,18 @@ public class Motors {
 		leftMotor.stop();
 		rightMotor.stop();
 		
+	}
+	public static void circle() {
+		EV3LargeRegulatedMotor leftMotor = new EV3LargeRegulatedMotor(MotorPort.B);
+		EV3LargeRegulatedMotor rightMotor = new EV3LargeRegulatedMotor(MotorPort.C);
+		
+		leftMotor.setSpeed(720);
+		rightMotor.setSpeed(360);
+		for (int i=0; i<5; i++) {
+			leftMotor.forward();
+			rightMotor.rotate(790);
+		}
+			
 	}
 
 }
