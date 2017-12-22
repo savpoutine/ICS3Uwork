@@ -71,7 +71,8 @@ public class TicTacToe {
 	/**
 	 * column.java
 	 * creates the vertical lines of the grid
-	 * @return column
+	 * @return column 
+	 * 
 	 */
 	public static String column() {
 		String column=("\t | \t | ");
