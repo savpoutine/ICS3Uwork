@@ -18,7 +18,7 @@ public class HelloWorld {
 				Sound.buzz();
 				break;
 			case Button.ID_RIGHT:
-				Sound.beepSequence();
+				Sound.twoBeeps();
 				break;
 			case Button.ID_UP:
 				break;

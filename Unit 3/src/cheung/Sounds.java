@@ -1,6 +1,9 @@
 package cheung;
 
 import lejos.hardware.Sound;
+import lejos.hardware.motor.EV3LargeRegulatedMotor;
+import lejos.hardware.port.MotorPort;
+import lejos.utility.Delay;
 
 public class Sounds {
 
@@ -32,6 +35,7 @@ public class Sounds {
 	
 	}
 	//https://newt.phys.unsw.edu.au/jw/notes.html
+	
 	
 
 }
