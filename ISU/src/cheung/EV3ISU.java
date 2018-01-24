@@ -14,7 +14,7 @@ import lejos.utility.Stopwatch;
 public class EV3ISU {
 	/**
 	 * java.EV3ISU
-	 * This program is a running alarm clock for sleepy people
+	 * This program allows a robot to move while making a sound like an alarm clock
 	 * January 16, 2018
 	 * @param <EV3LargeRegulatedMotor>
 	 * @param args
@@ -22,12 +22,11 @@ public class EV3ISU {
 	 */
 	public static  void main(String[] args) {
 
-
 		EV3LargeRegulatedMotor leftMotor= new EV3LargeRegulatedMotor(MotorPort.B);
 		EV3LargeRegulatedMotor rightMotor= new EV3LargeRegulatedMotor(MotorPort.C);
 		EV3TouchSensor touch = new EV3TouchSensor(SensorPort.S2);
 		EV3UltrasonicSensor ultra=new EV3UltrasonicSensor(SensorPort.S3);
-
+		
 		Stopwatch timer = new Stopwatch();		
 		timer.reset();
 
@@ -37,11 +36,11 @@ public class EV3ISU {
 		leftMotor.forward();
 		Sound.twoBeeps();
 		Delay.msDelay(2000);
-		ultrasonicSensor(ultra); 
 
 		while (!ifPressed(touch)) {
 			rightMotor.forward();
 			leftMotor.forward();
+			//sends instructions as to what to press
 			System.out.println("hold the touch sensor until it stops fully");
 			if (timer.elapsed() >= 1000) {
 				Sound.twoBeeps();
@@ -66,7 +65,7 @@ public class EV3ISU {
 
 
 	/**
-	 * java.ifPressed
+	 * if the touch sensor is pressed, it sends true or false for the next information
 	 * @param touch
 	 * @return true or false
 	 * 
@@ -84,7 +83,7 @@ public class EV3ISU {
 		}
 	}
 	/**
-	 * java.ultrasonicSensor 
+	 * gets the distance and send the value back to main
 	 * @param ultra
 	 * @return distance 
 	 */
